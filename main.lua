@@ -38,15 +38,15 @@ function love.load()
     paddle.width = 150
     paddle.height = 12
     paddle.speed = 5
-
+    
     ball = {}
     ball.x = 400
     ball.y = 300
     ball.radius = 4
-    ball.speedx = (math.random(2) == 1 and -100 or 100)*2                                   --here will change
-    ball.speedy = (math.random(2) == 1 and math.random(-80, -100) or math.random(80, 100))*2 --here will change
+    ball.speedx = (math.random(2) == 1 and -100 or 100)*2                         
+    ball.speedy = (math.random(2) == 1 and math.random(-80, -100) or math.random(80, 100))*2
     
-    hit_timer = 0
+    hit_counter = 0
     increment = 1.05
 
     state = 'pause'
@@ -82,7 +82,7 @@ function love.update(dt)
         ball.speedy = ball.speedy * -1 * increment
         ball.speedx = ball.speedx + 5*(ball.x -(paddle.x + (paddle.width/2)))
         sounds['paddle']:play()
-        hit_timer = hit_timer + 1
+        hit_counter = hit_counter + 1
     end
 
     -- Ball and Wall Collision
@@ -114,7 +114,7 @@ function love.keypressed(key)
             state = 'pause'
         elseif state == 'finish' then
             state = 'pause'
-            hit_timer = 0
+            hit_counter = 0
             ball.speedx = (math.random(2) == 1 and -100 or 100)*2                                   
             ball.speedy = (math.random(2) == 1 and math.random(-80, -100) or math.random(80, 100))*2
         end
@@ -151,7 +151,8 @@ function love.draw()
     love.graphics.clear(40/255, 200/255, 180/255) --clear the screen with a color
 
     love.graphics.setColor(0, 0, 0)
-    love.graphics.print("You hit " .. hit_timer .. " times")
+    love.graphics.print("You hit " .. hit_counter .. " times")
+    
 
     -- Paddle
     love.graphics.setColor(40/255, 40/255, 40/255)
@@ -165,10 +166,11 @@ function love.draw()
         love.graphics.setColor(0, 0, 0)
         love.graphics.printf('This game is created by donchokella for cs50 Term Project', 0, 20, windows.width, 'center')
         love.graphics.printf('Press Enter to Begin', 0, 40, windows.width, 'center')
+        
 
     elseif state == 'play' then
         -- no UI messages
     elseif state == 'finish' then
-        love.graphics.printf('Your score is ' .. hit_timer, 0, 100, windows.width, 'center')
+        love.graphics.printf('Your score is ' .. hit_counter, 0, 100, windows.width, 'center')
     end
 end
