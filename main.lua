@@ -35,7 +35,7 @@ function love.load()
     paddle = {}
     paddle.x = 400
     paddle. y = 530
-    paddle.width = 50
+    paddle.width = 150
     paddle.height = 12
     paddle.speed = 5
 
@@ -80,6 +80,7 @@ function love.update(dt)
     --Ball and Paddle Collision
     if coll_ball_paddle() == true then
         ball.speedy = ball.speedy * -1 * increment
+        ball.speedx = ball.speedx + 5*(ball.x -(paddle.x + (paddle.width/2)))
         sounds['paddle']:play()
         hit_timer = hit_timer + 1
     end
@@ -95,7 +96,7 @@ function love.update(dt)
         sounds['wall']:play()
     end
     -- Finish State
-    if ball.y > windows.base + 2 then
+    if ball.y > windows.base + 10 then
         ball.x = 400
         ball.y = 300
         sounds['gameover']:play()
