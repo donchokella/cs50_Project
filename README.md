@@ -1,8 +1,8 @@
 # cs50_Project
 
-Title       : This is 'Not a Brick Breaker Game'
+**Title**       : This is 'Not a Brick Breaker Game'
 
-Video Demo  : <URL>
+**Video Demo**  : <URL>
 
 ## Description :
 Brick Breaker originally programmed as "Breakout" by Atari in 1976.
@@ -11,7 +11,7 @@ The paddle is at the bottom of the screen, the bricks are stacked on top, and th
 The paddle is under the player's control. The player has 3 lives. The goal is to break all the bricks. 
 While doing this, the ball must not pass behind the paddle. If this happens, the player loses one life.
 
-**However...**
+***However...***
 
 as i said, this is 'Not a Brick Breaker Game'. In this game, you cannot even see a tiny piece of brick. 
 The only goal in this game is to get the highest score without missing the ball behind the paddle. 
@@ -32,8 +32,8 @@ You can track how many times you hit the ball from the top left corner. Remember
 To run this game, LÖVE2D must be installed on your computer. To download LÖVE2D, visit https://love2d.org/
 
 ## How to play :
-Use "a" to move left and "d" to move right.
-By using "enter" you can change the game states.
+Use **'a'** to move left and **'d'** to move right.             
+By using **"enter"** you can change the game states.
   
 ## Game States :
 This game consists of 3 states: **'pause'**, **'play'** and **'finish'**.
@@ -52,7 +52,7 @@ is used to make the ball move randomly. But this alone was not enough. The ball 
 
              math.randomseed(os.time())
 
-is used to make the randomness absolute. I got this idea from the first week of *Colton Ogden*'s GD50 class. By using "os.time()" here, the game starts with a unique seed every time it is opened.
+is used to make the randomness absolute. I got this idea from the first week of **Colton Ogden**'s GD50 class. By using **"os.time()"** here, the game starts with a unique seed every time it is opened.
   
   
 ## Notes        :
@@ -64,7 +64,8 @@ At the center of the paddle, the ball rotates at the same angle it came from. Bu
 In this way, it is aimed to prevent the stagnation of the game.     
 
 ![angle.bmp](https://github.com/donchokella/cs50_Project/blob/master/test/angle.bmp)
+
 Sounds are created by using a program called **"BFXR"**. You can download it from here, https://www.bfxr.net/
 
-**Author**      : Ali Alparslan
+**Author**      : Ali Alparslan                 
 **Email**       : ali.alparslan@outlook.com
