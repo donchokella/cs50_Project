@@ -63,7 +63,7 @@ It is an option given to the player to pause the game and adjust the position of
 At the center of the paddle, the ball rotates at the same angle it came from. But this angle is designed to differ towards the edges. 
 In this way, it is aimed to prevent the stagnation of the game.     
 
-![angle.png](https://raw.githubusercontent.com/donchokella/cs50_Project/master/Test/angle.png)
+![angle.bmp](https://github.com/donchokella/cs50_Project/blob/master/test/angle.bmp)
 Sounds are created by using a program called **"BFXR"**. You can download it from here, https://www.bfxr.net/
 
 **Author**      : Ali Alparslan
