@@ -96,7 +96,7 @@ function love.update(dt)
         sounds['wall']:play()
     end
     -- Finish State
-    if ball.y > windows.base + 10 then
+    if ball.y > windows.base + 50 then
         ball.x = 400
         ball.y = 300
         sounds['gameover']:play()

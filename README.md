@@ -2,7 +2,7 @@
 
 **Title**       : This is 'Not a Brick Breaker Game'
 
-**Video Demo**  : <URL>
+**Video Demo**  : https://youtu.be/2Y5mU1jizmo
 
 ## Description :
 Brick Breaker originally programmed as "Breakout" by Atari in 1976.
@@ -26,7 +26,7 @@ You can track how many times you hit the ball from the top left corner. Remember
 | RAM 			| 16 GB					|
 | OS			| Windows 10			|
 | System 		| 64 - bit 				|
-| Programming	| LOVE 11.4  			|
+| Programming	| LÖVE 11.4  			|
 
 ## How to run  :
 To run this game, LÖVE2D must be installed on your computer. To download LÖVE2D, visit https://love2d.org/
