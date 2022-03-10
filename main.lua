@@ -1,5 +1,5 @@
 --[[
-This is Not a Brick Breaker Game
+This is 'Not a Brick Breaker Game'
 
 Author: Ali Alparslan
 ali.alparslan@outlook.com
